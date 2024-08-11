@@ -1,0 +1,24 @@
+{% extends "menu.html" %}
+
+{% block title %} Мир игр - {{ block.super }}{% endblock%}
+
+{% block pagename %}
+    <h1>Игры</h1>
+    <p>Вы не ошиблись, выбирая нас!</p>
+    <p>Увлекательный мир приключений и море эмоций</p>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for i in Games %}
+            <li>{{i}}<a href="/platform/cart"><button>Добавить в корзину</button></a></li>
+            {% for i in description %}
+                <li>{{i}}<p>Описание</p></li>
+                    {% for i in cost %}
+                        <li>{{i}}<p>Стоимость</p></li>
+                    {% endfor %}
+            {% endfor %}
+
+        {% endfor %}
+    </ul>
+{% endblock %}

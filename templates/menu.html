@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мир игр{% endblock %}</title>
+    <link rel = 'stylesheet'  type="text/css" href = '{% static "style.css" %}'>
+</head>
+<body>
+    <pagename>
+        {% block pagename %}
+        {% endblock %}
+    </pagename>
+    <menu>
+        {% block menu %}
+            <h1>MENU</h1>
+            <p><a href="/platform"><button>Главная</button></a></p>
+            <p><a href="/platform/games"><button> Магазин</button></a></p>
+            <p><a href="/platform/cart"><button> Корзина</button></a></p>
+        {% endblock %}
+    </menu>
+    <content>
+        {% block content %}
+        {% endblock %}
+    </content>
+
+</body>
+</html>

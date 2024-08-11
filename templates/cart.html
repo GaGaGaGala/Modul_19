@@ -1,0 +1,14 @@
+{% extends "menu.html" %}
+
+{% block title %} Мир игр - {{ block.super }}{% endblock%}
+
+{% block pagename %}
+    <h1>Корзина</h1>
+{% endblock %}
+
+{% include "menu.html" %}
+
+{% block content %}
+    <h2>Извините, ваша корзина пуста</h2>
+    <h3>Мы рады, что вы выбрали нас!</h3>
+{% endblock %}
