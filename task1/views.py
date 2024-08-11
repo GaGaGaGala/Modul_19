@@ -70,10 +70,14 @@ def get_cart(request):
     return render(request, "cart.html")
 def get_games(request):
     Games = ["Cyberpunk 2077", "Hitman", "Mario"]
-
+    descr = ["Описание1", "Описание2", "Описание3"]
+    co_s = ["Стоимость1", "Стоимость2", "Стоимость3"]
     context = {
         'Games': Games,
+        'descr': descr,
+        'co_s': co_s,
     }
+
     return render(request, "games.html", context=context)
 def get_menu(request):
     return render(request, "menu.html")
