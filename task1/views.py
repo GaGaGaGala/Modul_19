@@ -69,13 +69,16 @@ def get_platform(request):
 def get_cart(request):
     return render(request, "cart.html")
 def get_games(request):
-    Games = ["Cyberpunk 2077", "Hitman", "Mario"]
-    descr = ["Описание1", "Описание2", "Описание3"]
-    co_s = ["Стоимость1", "Стоимость2", "Стоимость3"]
+    Games = ["Cyberpunk 2077, Game of the year, Стоимость: 31",
+             "Hitman, Who kills Mark?, Стоимость: 80",
+             "Mario, Old Game, Стоимость: 5"]
+
+    # descr = ["Game of the year", "Who kills Mark?", "Old Game"]
+    # co_s = ["31", "80", "5"]
     context = {
         'Games': Games,
-        'descr': descr,
-        'co_s': co_s,
+        # 'descr': descr,
+        # 'co_s': co_s,
     }
 
     return render(request, "games.html", context=context)

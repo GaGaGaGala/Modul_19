@@ -11,13 +11,7 @@
 {% block content %}
     <ul>
         {% for i in Games %}
-                <li>{{i}}<p>Описание: {{des}}</p><p>Стоимость: {{cs}}</p><a href="/platform/cart"><button>Добавить в корзину</button></a></li>
-                {% for descr in description %}
-                    <li>{{descr}}<p>Описание</p></li>
-                        {% for co_s in cost %}
-                            <li>{{co_s}}<p>Стоимость</p></li>
-                        {% endfor %}
-                {% endfor %}
+            <li><p>{{i}}</p><a href="/platform/cart"><button>Добавить в корзину</button></a></li>
         {% endfor %}
     </ul>
 {% endblock %}
