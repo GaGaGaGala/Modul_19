@@ -102,9 +102,9 @@ def get_platform(request):
 def get_cart(request):
     return render(request, "cart.html")
 def get_games(request):
-    Games = [{"Cyberpunk 2077, Game of the year, Стоимость: 31"},
-             {"Hitman, Who kills Mark?, Стоимость: 80"},
-             {"Mario, Old Game, Стоимость: 5"}]
+    Games = ["Cyberpunk 2077, Game of the year, Стоимость: 31",
+             "Hitman, Who kills Mark?, Стоимость: 80",
+             "Mario, Old Game, Стоимость: 5"]
     context = {
         'Games': Games,
 
